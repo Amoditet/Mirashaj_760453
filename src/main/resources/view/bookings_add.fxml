@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.BookingsAddController"
+            stylesheets="@style.css"
+            style="-fx-background-color: #3d3d3d; -fx-border-width:4; -fx-border-color:black;"
+            prefWidth="600" prefHeight="450">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;" alignment="CENTER_RIGHT">
+            <Button fx:id="closeButton" text="x" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: transparent; -fx-cursor: hand;" onAction="#handleClose" styleClass="button-exit"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+            <Text text="Book Now" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: white;"/>
+            <DatePicker fx:id="datePicker" promptText="Select booking date" style="-fx-font-size: 16px; -fx-pref-height: 40px; -fx-pref-width: 300px; -fx-text-fill: black;"/>
+            <ComboBox fx:id="timeComboBox" promptText="Select time" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-height: 40px; -fx-pref-width: 300px;"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 0 20 50 0;">
+                <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit" styleClass="filter-button"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>

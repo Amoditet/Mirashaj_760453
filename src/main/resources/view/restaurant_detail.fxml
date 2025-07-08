@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.RestaurantDetailController"
+            stylesheets="@style.css"
+            style="-fx-background-color: #3d3d3d;">
+    <top>
+        <HBox spacing="30" maxWidth="Infinity" prefHeight="60" style="-fx-background-color: #242424;">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Button prefWidth="40" prefHeight="32" onAction="#handleBack" styleClass="button-back" style="-fx-background-color: transparent; -fx-border-width: 0; -fx-border-color: transparent; -fx-padding: 0;">
+                    <graphic>
+                        <ImageView fx:id="arrowImageView" fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true"/>
+                    </graphic>
+                </Button>  
+
+                <Text style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-fill: white;">TheKnife</Text>
+                <Text text="Details" style="-fx-font-size: 18px; -fx-fill: white; -fx-padding: 0 0 0 20;" />
+            </HBox>
+
+            <HBox spacing="15" style="-fx-background-color: #242424; -fx-padding: 10 20;" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                <Region HBox.hgrow="ALWAYS"/>
+                <HBox fx:id="guestButtons" spacing="15" alignment="CENTER_RIGHT">
+                    <Button fx:id="signInBtn" text="Sign In" styleClass="nav-button" visible="false" />
+                </HBox>
+                <HBox fx:id="userButtons" spacing="15" alignment="CENTER_RIGHT">
+                    <Button fx:id="RestaurantsBtn" text="Restaurants" styleClass="nav-button" visible="false" />
+                    <Button fx:id="RepliesBtn" text="Replies" styleClass="nav-button" visible="false" />
+                    <Button fx:id="bookBtn" text="Bookings" styleClass="nav-button" visible="false" />
+                    <Button fx:id="favoriteBtn" text="Favorites" styleClass="nav-button" visible="false" />
+                    <Button fx:id="reviewBtn" text="Reviews" styleClass="nav-button" visible="false" />
+                </HBox>
+                <Button text="About" onAction="#handleAbout" styleClass="nav-button"/>
+                <Button fx:id="closeButton" text="x" style="-fx-font-size: 18px; -fx-border-color: white; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: transparent; -fx-cursor: hand;" onAction="#handleClose"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" fitToHeight="true" style="-fx-background-color: #3d3d3d; -fx-background: #3d3d3d; -fx-control-inner-background: #3d3d3d;">
+            <content>
+                <VBox spacing="20" style="-fx-padding: 35 10 20 10; -fx-background-color: #3d3d3d;">
+                    <VBox spacing="15" HBox.hgrow="ALWAYS" prefWidth="700">
+                <HBox spacing="10" alignment="TOP_LEFT">
+                    <Text fx:id="nameText" style="-fx-font-size: 42px; -fx-font-weight: bold; -fx-fill: white;"/>
+                    <Button fx:id="heartButton" prefWidth="75" prefHeight="60" onAction="#handleFavorite" styleClass="button-back" style="-fx-background-color: transparent; -fx-border-width: 0; -fx-padding: 0;">
+                        <graphic>
+                            <ImageView fx:id="heartImageView" fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="bookButton" text="Book" onAction="#handleBook" styleClass="filter-button" visible="false" prefWidth="120" style="-fx-translate-y: 6px;"/>
+                    <Button fx:id="reviewButton" text="Leave Review" onAction="#handleLeaveReview" styleClass="filter-button" visible="false" prefWidth="120" style="-fx-translate-y: 6px;"/>
+                </HBox>
+
+                <HBox spacing="20" alignment="TOP_LEFT">
+                    <VBox spacing="5" style="-fx-font-size: 22px; -fx-fill: white;" prefWidth="350">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/restaurant.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="cuisineText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/star.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="ratingText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/review.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="reviewsText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/dollar.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="priceText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/location.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="distanceText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/location.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="addressText" style="-fx-fill: white;"/>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" >
+                                <image>
+                                    <Image url="@../images/phone.png"/>
+                                </image>
+                            </ImageView>
+                            <Text fx:id="phoneNumberText" style="-fx-fill: white;"/>
+                        </HBox>
+                    </VBox>
+
+                    <Label fx:id="descriptionLabel" wrapText="true" mouseTransparent="true" focusTraversable="false" prefWidth="700" style="-fx-translate-y: -48px; -fx-font-size: 16px; -fx-text-fill: white; -fx-padding: 40 0 20 0;">
+                        <VBox.margin>
+                            <javafx.geometry.Insets top="10" right="0" bottom="20" left="0"/>
+                        </VBox.margin>
+                    </Label>
+                </HBox>
+            </VBox>
+
+            <ScrollPane fitToWidth="true" prefHeight="300" style="-fx-padding: 10 20 20 20; -fx-background-color: #3d3d3d; -fx-border-color: #000000; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-background: #3d3d3d;">
+                <content>
+                    <VBox fx:id="reviewsContainer" spacing="10" style="-fx-background-color: #3d3d3d; -fx-background: #3d3d3d;" />
+                </content>
+            </ScrollPane>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

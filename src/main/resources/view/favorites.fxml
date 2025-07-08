@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.FavoritesController" fx:id="rootPane" stylesheets="@style.css" style="-fx-background-color: #3d3d3d;">
+    <top>
+        <HBox spacing="30" style="-fx-background-color: #242424; -fx-padding: 10 20;" alignment="CENTER_LEFT">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+
+                <Button prefWidth="40" prefHeight="32" onAction="#handleGoBack" styleClass="button-back" style="-fx-background-color: transparent; -fx-border-width: 0; -fx-border-color: transparent; -fx-padding: 0;">
+                    <graphic>
+                        <ImageView fx:id="arrowImageView" fitHeight="18" fitWidth="18" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 4px;"/>
+                    </graphic>
+                </Button>
+
+                <Text style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-fill: white;">TheKnife</Text>
+                <Text text="Favorites" style="-fx-font-size: 18px; -fx-fill: white; -fx-padding: 0 0 0 20;" />
+            </HBox>
+            <HBox spacing="15" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                <Region HBox.hgrow="ALWAYS"/>
+                <HBox fx:id="guestButtons" spacing="15" alignment="CENTER_RIGHT">
+                    <Button fx:id="signInBtn" text="Sign In" styleClass="nav-button" visible="false" />
+                </HBox>
+                <HBox fx:id="userButtons" spacing="15" alignment="CENTER_RIGHT">
+                    <Button fx:id="restaurantsBtn" text="Restaurants" styleClass="nav-button" visible="false" />
+                    <Button fx:id="bookBtn" text="Bookings" styleClass="nav-button" visible="false" />
+                    <Button fx:id="favoriteBtn" text="Favorites" styleClass="nav-button" visible="false" />
+                    <Button fx:id="reviewBtn" text="Reviews" styleClass="nav-button" visible="false" />
+                </HBox>
+                <Button text="About" onAction="#handleAbout" styleClass="nav-button" />
+                <Button fx:id="exitBtn" text="x" style="-fx-font-size: 18px; -fx-border-color: white; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: transparent; -fx-cursor: hand;" onAction="#handleExitAction" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <center>
+        <ListView fx:id="favoritesListView" style="-fx-background-color: #3d3d3d;" />
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-background-color: #242424; -fx-padding: 15;">
+            <Text style="-fx-fill: white;">© 2025 TheKnife. All rights reserved.</Text>
+        </HBox>
+    </bottom>
+</BorderPane>

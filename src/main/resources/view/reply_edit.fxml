@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.ReplyEditController"
+            stylesheets="@style.css"
+            style="-fx-background-color: #3d3d3d; -fx-border-width:4; -fx-border-color:black;"
+            prefWidth="600" prefHeight="450">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;" alignment="CENTER_RIGHT">
+            <Button fx:id="closeButton" text="x" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: transparent; -fx-cursor: hand;" onAction="#handleClose" styleClass="button-exit"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Text text="Edit Reply" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: white;"/>
+            <Label fx:id="reviewInfoLabel" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;" text="Replying to: Review" />
+            <Label fx:id="originalReviewLabel" style="-fx-text-fill: #CCCCCC; -fx-font-size: 14px;" text="Original review text will appear here" wrapText="true" />
+            <Text text="Your Reply:" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-fill: white;"/>
+            <TextArea fx:id="replyTextArea" promptText="Enter your reply to this review..." wrapText="true" prefRowCount="5" style="-fx-font-size: 14px;"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Save" onAction="#handleSave" styleClass="filter-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

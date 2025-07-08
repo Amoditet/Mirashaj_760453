@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.AboutController" prefHeight="450.0" prefWidth="600.0" stylesheets="@style.css" style="-fx-background-color:#3d3d3d; -fx-border-width:4; -fx-border-color:black;">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <padding>
+                <Insets top="10" right="5" bottom="10" left="5"/>
+            </padding>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleExitAction" prefHeight="30.0" prefWidth="30.0" text="X" styleClass="button-exit"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <HBox alignment="CENTER" spacing="20">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <ImageView fitHeight="130.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                    <image>
+                        <Image url="@../images/logo_uninsubria.png" />
+                    </image>
+                </ImageView>
+                <VBox>
+                    <Label style="-fx-font-size: 20px;" alignment="CENTER" prefHeight="36.0" prefWidth="328.0" text='Project "The Knife" developed for:' textAlignment="CENTER" wrapText="true" />
+                    <Label style="-fx-font-size: 18px; -fx-translate-x: 23;" prefHeight="58.0" prefWidth="283.0" text="Laboratory A, Computer Science Degree Course 2024/2025" textAlignment="CENTER" wrapText="true" />
+                </VBox>
+            </HBox>
+            <Separator prefHeight="3.0" prefWidth="551.0" />
+            <Label style="-fx-font-size: 18px;" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="249.0" text="Developed by:" textAlignment="CENTER" wrapText="true" />
+
+            <HBox spacing="10" alignment="CENTER">
+                <padding>
+                    <Insets top="0" right="50" bottom="0" left="50"/>
+                </padding>
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_LEFT" prefWidth="249.0" text="Erik Mirashaj" textAlignment="CENTER" wrapText="true" />
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_RIGHT" prefWidth="249.0" text="Mat. 760453" textAlignment="CENTER" wrapText="true" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <padding>
+                    <Insets top="0" right="50" bottom="0" left="50"/>
+                </padding>
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_LEFT" prefWidth="249.0" text="Igor Gorchynskyi" textAlignment="CENTER" wrapText="true" />
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_RIGHT" prefWidth="249.0" text="Mat. 757184" textAlignment="CENTER" wrapText="true" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <padding>
+                    <Insets top="0" right="50" bottom="0" left="50"/>
+                </padding>
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_LEFT" prefWidth="249.0" text="Lorenzo Mujeci" textAlignment="CENTER" wrapText="true" />
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_RIGHT" prefWidth="249.0" text="Mat. 757597" textAlignment="CENTER" wrapText="true" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <padding>
+                    <Insets top="0" right="50" bottom="0" left="50"/>
+                </padding>
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_LEFT" prefWidth="249.0" text="Matteo Nika" textAlignment="CENTER" wrapText="true" />
+                <Label style="-fx-font-size: 18px;" alignment="CENTER_RIGHT" prefWidth="249.0" text="Mat. 762540" textAlignment="CENTER" wrapText="true" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="0" right="10" bottom="10" left="10"/>
+            </padding>
+            <ImageView fitHeight="85.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/java-logo.png" />
+                </image>
+            </ImageView>
+            <Label style="-fx-font-size: 16px;" text="Java JDK 23" />
+            <Label style="-fx-font-size: 16px;" text="OpenJFx 24.0.1" />
+        </VBox>
+    </bottom>
+
+</BorderPane>

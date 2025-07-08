@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="theknife.RestaurantsParametersController"
+            stylesheets="@style.css"
+            style="-fx-background-color: #3d3d3d;">
+
+    <top>
+        <HBox alignment="TOP_RIGHT" spacing="10" style="-fx-padding: 5 10 5 10;">
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="cancelButton" text="X" styleClass="button-exit" onAction="#handleCancel" prefWidth="30" prefHeight="30" style="-fx-padding: 0;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" maxWidth="Infinity" maxHeight="Infinity" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS" style="-fx-background-radius: 20; -fx-padding: 10 40 20 40;">
+            <HBox alignment="CENTER" spacing="30" style="-fx-margin-bottom: 20px;">
+                <Label text="Add Restaurant" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            </HBox>
+            <HBox spacing="40" alignment="CENTER">
+                <VBox spacing="25" alignment="CENTER_LEFT" maxWidth="280" maxHeight="Infinity" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+            <TextField fx:id="nameField" promptText="Name *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="addressField" promptText="Address *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="locationField" promptText="Location *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="priceField" promptText="Price *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="cuisineField" promptText="Cuisine *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="phoneNumberField" promptText="Phone Number *" styleClass="text-field" maxWidth="280" prefHeight="40"  style="-fx-padding: 5 10 5 10;"/>
+            <TextField fx:id="descriptionField" promptText="Description *" styleClass="text-field" maxWidth="280" prefHeight="40" style="-fx-padding: 5 10 5 10;"/>
+                </VBox>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="addButton" text="Add" maxWidth="140" prefHeight="45" styleClass="button-register" onAction="#handleAdd"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

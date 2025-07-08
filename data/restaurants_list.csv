@@ -1,0 +1,2 @@
+restaurantId,Username,Name,Address,Location,Price,Cuisine,PhoneNumber,Description
+10000,owner,"Alta","Via Carnia","Varese","€","Creative","+39 0332264561","Questo ristorante è stato aggiunto manualmente e caricato dal file restaurants_list.csv"
