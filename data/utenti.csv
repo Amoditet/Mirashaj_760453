@@ -1,3 +1,4 @@
 Name,Surname,Username,Password,Location,Role
 Test,User,a,a,varese,cliente
-Owner,Test,owner,owner,varese,ristoratore
+Owner,Test,owner,owner,Madrid,ristoratore
+Shirli,Mirashaj,shirli,mirashaj,varese,client
